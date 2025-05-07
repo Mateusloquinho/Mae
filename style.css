@@ -1,0 +1,100 @@
+estilo.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: pink;
+  padding: 10px;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: darkred;
+  font-weight: bold;
+}
+main {
+  padding: 80px 20px 20px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+.gallery img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.02);
+}
+.lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.text-section {
+  margin: 40px 0;
+}
+.phrase {
+  margin: 30px 0;
+  font-style: italic;
+  text-align: center;
+  color: darkred;
+}
+
+/* Estilo da página de entrada */
+body.entrada {
+  background: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#envelope {
+  width: 200px;
+  height: 150px;
+  background: #ffc0cb;
+  border: 3px solid darkred;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: darkred;
+  cursor: pointer;
+}
+#envelope::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffc0cb;
+  clip-path: polygon(0 0, 100% 0, 50% 60%);
+  top: 0;
+  left: 0;
+  border-bottom: 3px solid darkred;
+}

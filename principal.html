@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Minha Mãe</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#fotos">Fotos</a>
+      <a href="#frases">Frases</a>
+      <a href="#texto">Texto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="fotos" class="gallery">
+      <img src="foto1.png" alt="Foto 1" onclick="abrirLightbox(this.src)">
+      <img src="foto2.png" alt="Foto 2" onclick="abrirLightbox(this.src)">
+      <img src="foto3.png" alt="Foto 3" onclick="abrirLightbox(this.src)">
+      <img src="foto4.png" alt="Foto 4" onclick="abrirLightbox(this.src)">
+      <img src="foto5.png" alt="Foto 5" onclick="abrirLightbox(this.src)">
+      <img src="foto6.png" alt="Foto 6" onclick="abrirLightbox(this.src)">
+    </section>
+
+    <section id="frases">
+      <div class="phrase\">\"Você é a luz que guia minha vida.\"</div>
+      <div class="phrase\">\"Amor de mãe é o mais puro de todos.\"</div>
+      <div class="phrase\">\"Te amo para sempre.\"</div>
+    </section>
+
+    <section id="texto" class="text-section">
+      <h2>Texto para minha mãe</h2>
+      <p>Aqui você pode escrever um texto especial para sua mãe...</p>
+    </section>
+  </main>
+
+  <div class="lightbox" onclick="fecharLightbox()">
+    <img id="lightbox-img" src=\"\" alt=\"Imagem Ampliada\">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
